@@ -209,6 +209,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8450-common/proprietary/vendor/gpu/kbc/unified_ksqs.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_ksqs.bin
 
 PRODUCT_PACKAGES += \
+    vendor.qti.diaghal-V1-ndk \
     eglSubDriverAndroid \
     libEGL_adreno \
     libGLESv1_CM_adreno \
@@ -244,6 +245,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.gatekeeper@1.0-impl-qti \
     com.dsi.ant@1.0-impl \
+    gyro_fusion_interface \
     vendor.qti.esepowermanager@1.1-impl \
     vendor.qti.hardware.alarm@1.0-impl \
     vendor.qti.hardware.bluetooth_audio@2.0-impl \
@@ -260,7 +262,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.soter@1.0-impl \
     vendor.qti.hardware.wifidisplaysession@1.0-impl \
     vulkan.adreno \
-    jcos_nq_client \
+    jcos_nq_client-v1 \
     lib-imscommon \
     lib-imsdpl \
     lib-imsqimf \
@@ -288,10 +290,20 @@ PRODUCT_PACKAGES += \
     libQTEEConnector_vendor \
     libQcelp13SwCodec \
     libQtiRilLoadable \
+    lib_bt_aptx \
+    lib_bt_ble \
+    lib_bt_bundle \
+    lib_bt_lhdc \
     libadm \
     libadsp_default_listener \
     libadsprpc \
+    libar-acdb \
+    libar-gpr \
+    libar-gsl \
+    libats \
     libaudio_log_utils \
+    libaudiocloudctrl \
+    libaudioroute_ext \
     libbacklight-calib \
     libbluetooth_audio_session_qti \
     libbluetooth_audio_session_qti_2_1 \
@@ -362,6 +374,8 @@ PRODUCT_PACKAGES += \
     liblowi_common \
     liblowi_wifihal \
     liblqe \
+    liblx-ar_util \
+    liblx-osal \
     libmasc \
     libmcs \
     libmdmdetect \
@@ -370,6 +384,7 @@ PRODUCT_PACKAGES += \
     libmemutils \
     libminkdescriptor \
     libminksocket_vendor \
+    libmisight \
     libmlipay \
     libmlipay@1.1 \
     libmm-hdcpmgr \
@@ -467,6 +482,7 @@ PRODUCT_PACKAGES += \
     libqtikeymint \
     librcc \
     librcmask \
+    libresampler \
     libril-db \
     libril-legacy \
     libril-qc-ltedirectdisc \
@@ -544,9 +560,10 @@ PRODUCT_PACKAGES += \
     libwvhidl \
     libwvkeybox \
     libxiaomi_qcril \
+    libxlog \
     libxml \
     libxtadapter \
-    ls_nq_client \
+    ls_nq_client-v1 \
     libwvdrmengine \
     qcrilInterfaces \
     qcrilMarshal \
@@ -558,12 +575,11 @@ PRODUCT_PACKAGES += \
     qtiPeripheralMgr \
     qtiril-utils \
     qtiwakelock \
-    se_nq_extn_client \
+    se_nq_extn_client-v1 \
     sensors.ssc \
     sensors.touch.detect \
     sensors.ultrasoundproximity \
     libasphere \
-    libmisoundfx \
     vendor.display.color@1.0 \
     vendor.display.color@1.1 \
     vendor.display.color@1.2 \
@@ -592,6 +608,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.gnss-V3-ndk \
     vendor.qti.gnss-V5-ndk \
     vendor.qti.gnss-service \
+    vendor.qti.hardware.AGMIPC@1.0-impl \
     vendor.qti.hardware.alarm@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.1 \
@@ -617,7 +634,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.dpmservice@1.0_vendor \
     vendor.qti.hardware.dpmservice@1.1_vendor \
     vendor.qti.hardware.dsp@1.0 \
-    vendor.qti.hardware.fm@1.0 \
     vendor.qti.hardware.mwqemadapter@1.0 \
     vendor.qti.hardware.qccsyshal@1.0_vendor \
     vendor.qti.hardware.qccsyshal@1.1_vendor \
@@ -743,6 +759,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.qccsyshal@1.2 \
     vendor.qti.hardware.qccvndhal@1.0 \
     vendor.qti.hardware.wifidisplaysession@1.0 \
+    vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk \
     vendor.qti.imsrtpservice@3.0 \
     vendor.qti.imsrtpservice@3.1 \
     vendor.qti.qccvndhal_aidl-V1-ndk \
@@ -753,14 +770,14 @@ PRODUCT_PACKAGES += \
     TimeService \
     com.qualcomm.qti.gpudrivers.taro.api31 \
     uimgbaservice \
-    HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND \
     HotwordEnrollmentXGoogleHEXAGON_WIDEBAND \
+    HotwordEnrollmentYGoogleHEXAGON_WIDEBAND \
     AtFwd2 \
     ImsRcsService \
     PowerOffAlarm \
     QCC \
-    QtiTelephony \
     QtiTelephonyService \
+    QtiTelephony \
     WfdService \
     dpmserviceapp \
     ims \
@@ -788,28 +805,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.ims.rcsuce-V1.1-java \
     vendor.qti.ims.rcsuce-V1.2-java \
     vendor.qti.ims.rcsuceaidlservice-V1-java \
-    10.0_config.sql \
-    11.0_config.sql \
-    12.0_config.sql \
-    13.0_config.sql \
-    14.0_config.sql \
-    6.0_config.sql \
-    7.0_config.sql \
-    8.0_config.sql \
-    9.0_config.sql \
-    0_initial_qcrilnr.sql \
-    10_version_update_ecc_table.sql \
-    11_version_update_ecc_table.sql \
-    12_version_update_ecc_table.sql \
-    1_version_intro_qcrilnr.sql \
-    2_version_add_wps_config_qcrilnr.sql \
-    3_version_update_wps_config_qcrilnr.sql \
-    4_version_update_ecc_table_qcrilnr.sql \
-    5_version_update_ecc_table_qcrilnr.sql \
-    6_version_change_property_table_qcrilnr.sql \
-    7_version_update_ecc_table_qcrilnr.sql \
-    8_version_update_ecc_table.sql \
-    9_version_update_ecc_table.sql \
     android.hardware.security.keymint-service-qti.xml \
     c2_manifest_vendor.xml \
     c2_manifest_vendor_audio.xml \
